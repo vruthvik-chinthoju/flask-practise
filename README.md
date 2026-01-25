@@ -78,14 +78,17 @@ python main.py
 - Add unit and integration tests
 
   ---
-## 👤 Author
+
+## Author 
 
 **Ruthvik Chinthu J**  
 Backend Developer | Python • Flask • Django  
 
-Focused on building scalable backend applications through hands-on practice and real-world projects.
+**Name:** Chinthoju Vruthvik  
+**Contact:** 8919721525  
+**LinkedIn:** [Chinthoju Vruthvik](https://www.linkedin.com/in/chinthoju-vruthvik-83754b320)
+**GitHub:** [Chitnhoju Vruthvik](https://github.com/vruthvik-chinthoju)
 
-🔗 GitHub: <a href="https://github.com/vruthvik-chinthoju" target="_blank">github.com/vruthvik-chinthoju</a>
 ---
 
 
