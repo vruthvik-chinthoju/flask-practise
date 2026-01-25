@@ -81,8 +81,8 @@ python main.py
 
 ## Author 
 
-Ruthvik Chinthu 
-Full Stack Developer | Python • Flask • Django  
+-Ruthvik Chinthu 
+-Full Stack Developer | Python • Flask • Django  
 
 **Name:** Chinthoju Vruthvik  
 **Contact:** 8919721525  
