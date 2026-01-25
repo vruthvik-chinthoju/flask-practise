@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="icon" type="image/x-icon" href="/static/6194029.png">
+    <style>
+        @font-face {
+            font-family: "good";
+            src: url(/ATFFranklinGothicRegular-EOZB7GKP.23b21f99.otf);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+        }
+        @font-face {
+            font-family: "poppins-regular";
+            src: url('/static/fonts/Poppins-Regular.ttf');
+        }
+        @font-face {
+            font-family: "poppins-semibold";
+            src: url('/static/fonts/Poppins-SemiBold.ttf');
+        }
+        .box{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red; 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .box1{
+            /* box-shadow: 0px 0px 15px rgb(92, 82, 82); */
+            height: 80%;
+            width: 60%;
+        }
+        h1{
+            text-align: center;
+            padding: 15px;
+            background-color:slateblue;
+            /* color: white; */
+            width: 100%;
+            border-top-left-radius:15px;
+            border-top-right-radius: 15px;
+            border-top:1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+
+        }
+        .center{
+            width: 100%;
+            height: 70%;
+            background-color: white;
+        }
+        .anchor{
+            width: 100%;
+            height: 15%;
+            background-color: white;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .center{
+            display: flex;
+        }
+        .photo{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid black;
+            background-color:slategray;
+        }
+        .photo img{
+            width: 80%;
+        }
+        form{
+            font-family: "poppins-semibold";
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 30px;
+            gap: 8px;
+            font-size: 18px;
+            /* background-color: rgb(245, 42, 228); */
+            background-color: steelblue;
+            /* background-color: white; */
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+
+        }
+        input{
+            padding: 12px;
+            border-radius: 8px 8px 8px 8px;
+            border: 1px solid black;
+            font-family: "poppins-regular";
+        }
+        button{
+            font-family: "poppins-semibold";
+            width: 30%;
+            border: 1px solid black;
+            /* background-color:rgb(34, 238, 218); */
+            background-color: #23ced2;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 15px 15px 15px 15px;
+        }
+        button:hover{
+            background-color: rgba(40, 15, 207, 0.342);
+            color: white;
+        }
+        .anchor{
+            background-color: slateblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            /* border-top: 1px solid black; */
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 2px solid black;
+            border-top: 1px solid black;
+        }
+        input:hover{
+            background-color:rgb(241, 248, 248);
+        }
+        @media screen and (max-width:700px) {
+          .center{
+            flex-direction: column;
+          }
+          form{
+            height: 800px;
+            width: 100%;
+          }
+          .photo{
+            display: none;
+          }
+          button{
+            width: 50%;
+            border: 1px solid black;
+            background-color: #23ced2;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 15px 15px 15px 15px;
+        }
+        .center{
+            height: 50%;
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .anchor{
+            margin-top: 30px;
+            height: 70px;
+        }
+        .anchor a{
+            text-decoration: none;
+        }
+        .box1 h1{
+            font-size: 25px;
+        }
+          
+        }
+        .anchor a{
+            color: black;
+            font-weight: bold;
+        }
+        @media screen and (max-width:440px) {
+            .form{
+                width: 100%;
+                border: 1px solid black;
+            }
+            .box1{
+                width: 90%;
+            }
+            
+        }
+        ul{
+            text-align: center;
+            background-color: steelblue;
+            color: black;
+            font-family:"poppins-semibold";
+            font-weight: 900;
+            padding: 10px;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class=flashes>
+        {% for category, message in messages %}
+            <li id="flash" class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    <div class="box">
+        <div class="box1">
+            <h1>Sign up (Todo)</h1>
+            <div class="center">
+                <form action="{{ url_for('signup') }}" method="POST">
+                    <label for="name">Enter Your Name</label>
+                    <input type="text"name='name' placeholder="Enter Your Name">
+                    <label for="name">Enter Your Email</label>
+                    <input type="email" name="email" placeholder="Enter Your Email">
+                    <label for="name">Enter Your Password</label>
+                    <input type="password" name="password" placeholder="Enter Your Password">
+                    <button>SUBMIT</button>
+                </form>
+                <div class="photo">
+                    <img src="{{ url_for('static',filename='6194029.png')}}" alt="">
+                </div>
+            </div>
+            <div class="anchor">
+                <a href="{{ url_for('login') }}">Already Have an account!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

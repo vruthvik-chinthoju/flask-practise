@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: grey;
+
+}
+.navbar{
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    position:relative;
+
+}
+.navbar a{
+    font-size: large;
+    padding: 20px;
+    color: white;
+
+}
+.image{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: transparent;
+    font-weight: 500;
+    padding: 20px;
+    font-size: 35px;
+    font-style:normal;
+
+}
+.box{
+ margin-top: 20px;
+ margin-left: 100px;
+
+}

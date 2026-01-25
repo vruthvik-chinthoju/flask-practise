@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>user_feedback</h1>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>see message</th>
+            <th>Delete feedback</th>
+        </tr>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td style="text-align: center;">
+                        <button>
+                            <a href="{{ url_for('fb_message',id=user.id) }}" style="text-decoration: none;color: black;">See Message</a>
+                        </button>
+                    </td>
+                    <td style="text-align: center;"> 
+                        <button>
+                            <a href="" style="text-decoration: none;color: black; ">Delete Feedback</a>
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
+    </table>
+
+</body>
+</html>

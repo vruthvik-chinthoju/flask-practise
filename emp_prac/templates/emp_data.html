@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            background-color: black;
+            color: white;
+        }
+        input{
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+     <form action="/update/{{ emp.id }}" method="POST">
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Update</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="id" value="{{ emp.id }}"></td>
+                <td><input type="text" name="name" value="{{ emp.name }}"></td>
+                <td><input type="text" name="email" value="{{ emp.email }}"></td>
+                <td><input type="text" name="department" value="{{ emp.department }}"></td>
+                <td><input type="text" name="salary" value="{{ emp.salary }}"></td>
+                <td><button>UPDATE</button></td>
+            </tr>
+        </table>
+     </form>
+</body>
+</html>
