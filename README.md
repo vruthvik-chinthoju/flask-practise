@@ -81,13 +81,13 @@ python main.py
 
 ## Author 
 
-**Ruthvik Chinthu J**  
-Backend Developer | Python • Flask • Django  
+**Ruthvik Chinthu **  
+Full Stack Developer | Python • Flask • Django  
 
 **Name:** Chinthoju Vruthvik  
 **Contact:** 8919721525  
 **LinkedIn:** [Chinthoju Vruthvik](https://www.linkedin.com/in/chinthoju-vruthvik-83754b320)
-**GitHub:** [Chitnhoju Vruthvik](https://github.com/vruthvik-chinthoju)
+**GitHub:** [Chinthoju Vruthvik](https://github.com/vruthvik-chinthoju)
 
 ---
 
